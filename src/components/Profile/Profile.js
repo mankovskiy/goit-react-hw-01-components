@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-export function User({
+export function Profile({
   avatar,
   username,
   tag,
@@ -10,7 +10,7 @@ export function User({
   return (
     <div class="profile">
       <div class="description">
-        <img src={avatar} alt="User avatar" class="avatar" />
+        <img src={avatar} alt="User avatar" width={100} class="avatar" />
         <p class="name">{username}</p>
         <p class="tag">{tag}</p>
         <p class="location">{location}</p>
@@ -34,7 +34,7 @@ export function User({
   );
 }
 
-User.propTypes = {
+Profile.propTypes = {
   avatar: PropTypes.string.isRequired,
   username: PropTypes.string.isRequired,
   tag: PropTypes.string.isRequired,
