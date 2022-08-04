@@ -1,11 +1,12 @@
 import user from '../user.json';
 import data from '../data.json';
 import friends from '../friends.json';
+import transactions from '../transactions.json';
 import { FriendList } from './FriendList/FriendList';
 
 import { Section } from './SectionStat/SectionStat';
 import { StatisticsList } from './StatisticsList/StatisticsList';
-
+import { TransactionHistory } from '../components/TransactionHistory/TransactionHistory';
 import { Profile } from './Profile/Profile';
 // import { Statistics } from './Statistics/Statistics';
 
@@ -23,12 +24,7 @@ export function App() {
         <StatisticsList lists={data} />
       </Section>
       <FriendList friends={friends} />
-      {/* <Statistics
-        title="Upload stats"
-        label={data[0].label}
-        percentage={data[0].percentage}
-      /> */}
-      {/* <Statistics stats={data} /> */}
+      <TransactionHistory items={transactions} />;
     </div>
   );
 }

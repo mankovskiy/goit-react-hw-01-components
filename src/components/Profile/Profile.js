@@ -1,6 +1,8 @@
+import { SiMaildotru } from 'react-icons/si';
 import PropTypes from 'prop-types';
 
 export function Profile({
+  icon: Icon,
   avatar,
   username,
   tag,
@@ -12,7 +14,7 @@ export function Profile({
       <div class="description">
         <img src={avatar} alt="User avatar" width={100} class="avatar" />
         <p class="name">{username}</p>
-        <p class="tag">{tag}</p>
+        <p class="tag">@{tag}</p>
         <p class="location">{location}</p>
       </div>
 
