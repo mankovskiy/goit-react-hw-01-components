@@ -1,8 +1,18 @@
 import { SiMaildotru } from 'react-icons/si';
 import PropTypes from 'prop-types';
+import {
+  StatsContainer,
+  StatsItem,
+  UserInfo,
+  UserPhoto,
+  UserName,
+  UserTag,
+  UserLocation,
+  UserFollowers,
+  UserFollowersStats,
+} from '../Profile/Profile.styled';
 
 export function Profile({
-  icon: Icon,
   avatar,
   username,
   tag,
@@ -10,28 +20,30 @@ export function Profile({
   stats: { followers, views, likes },
 }) {
   return (
-    <div class="profile">
-      <div class="description">
-        <img src={avatar} alt="User avatar" width={100} class="avatar" />
-        <p class="name">{username}</p>
-        <p class="tag">@{tag}</p>
-        <p class="location">{location}</p>
-      </div>
-
-      <ul class="stats">
-        <li>
-          <span class="label">Followers</span>
-          <span class="quantity">{followers}</span>
-        </li>
-        <li>
-          <span class="label">Views</span>
-          <span class="quantity">{views}</span>
-        </li>
-        <li>
-          <span class="label">Likes</span>
-          <span class="quantity">{likes}</span>
-        </li>
-      </ul>
+    <div>
+      <UserInfo>
+        <UserPhoto src={avatar} alt="User avatar" width={100} />
+        <UserName>{username}</UserName>
+        <UserTag>
+          <SiMaildotru size={12} />
+          {tag}
+        </UserTag>
+        <UserLocation>{location}</UserLocation>
+      </UserInfo>
+      <StatsContainer>
+        <StatsItem>
+          <UserFollowers>Followers</UserFollowers>
+          <UserFollowersStats>{followers}</UserFollowersStats>
+        </StatsItem>
+        <StatsItem>
+          <UserFollowers>Views</UserFollowers>
+          <UserFollowersStats>{views}</UserFollowersStats>
+        </StatsItem>
+        <StatsItem>
+          <UserFollowers>Likes</UserFollowers>
+          <UserFollowersStats>{likes}</UserFollowersStats>
+        </StatsItem>
+      </StatsContainer>
     </div>
   );
 }

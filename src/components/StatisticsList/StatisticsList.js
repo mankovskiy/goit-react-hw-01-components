@@ -5,9 +5,9 @@ export function StatisticsList({ lists }) {
     // <section class="statistics">
     //   {title && <h2 class="title">{title}</h2>}
 
-    <ul class="stat-list">
+    <ul className="stat-list">
       {lists.map(list => (
-        <li key={list.id} class="item">
+        <li key={list.id} className="item">
           <Statistics label={list.label} percentage={list.percentage} />
         </li>
       ))}
