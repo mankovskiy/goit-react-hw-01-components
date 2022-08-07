@@ -1,12 +1,14 @@
+import { TableHead } from '../TransactionHistory/TransactionHistory.styled';
+
 export function TransactionHistory({ items }) {
   return (
-    <table className="transaction-history">
+    <table>
       <thead>
-        <tr>
+        <TableHead>
           <th>Type</th>
           <th>Amount</th>
           <th>Currency</th>
-        </tr>
+        </TableHead>
       </thead>
 
       <tbody>
@@ -21,4 +23,3 @@ export function TransactionHistory({ items }) {
     </table>
   );
 }
-// type, amount, currency;

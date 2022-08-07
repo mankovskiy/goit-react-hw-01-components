@@ -24,7 +24,7 @@ export function App() {
           stats={user.stats}
         />
       </Box>
-      <Box display="flex" justifyContent="center" pt={20}>
+      <Box display="flex" justifyContent="center" mt={20} pt={20}>
         <Section title="Upload stats">
           <StatisticsList lists={data} />
         </Section>
@@ -33,7 +33,7 @@ export function App() {
         <FriendList friends={friends} />
       </Box>
       <Box display="flex" justifyContent="center" pt={20}>
-        <TransactionHistory items={transactions} />;
+        <TransactionHistory items={transactions} />
       </Box>
     </div>
   );

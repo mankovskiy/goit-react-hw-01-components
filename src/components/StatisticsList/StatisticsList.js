@@ -1,17 +1,17 @@
 import { Statistics } from '../Statistics/Statistics';
+import {
+  StatisticsColorList,
+  StatisticsItem,
+} from '../StatisticsList/StatisticsList.styled';
 
 export function StatisticsList({ lists }) {
   return (
-    // <section class="statistics">
-    //   {title && <h2 class="title">{title}</h2>}
-
-    <ul className="stat-list">
+    <StatisticsColorList>
       {lists.map(list => (
-        <li key={list.id} className="item">
+        <StatisticsItem key={list.id}>
           <Statistics label={list.label} percentage={list.percentage} />
-        </li>
+        </StatisticsItem>
       ))}
-    </ul>
-    // </section>
+    </StatisticsColorList>
   );
 }

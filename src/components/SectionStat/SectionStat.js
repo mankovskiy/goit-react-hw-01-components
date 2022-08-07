@@ -1,8 +1,9 @@
+import { Title, SectionStat } from '../SectionStat/SectionStat.styled';
 export function Section({ title, children }) {
   return (
-    <div>
-      {title && <h2>{title}</h2>}
+    <SectionStat>
+      {title && <Title>{title}</Title>}
       {children}
-    </div>
+    </SectionStat>
   );
 }
