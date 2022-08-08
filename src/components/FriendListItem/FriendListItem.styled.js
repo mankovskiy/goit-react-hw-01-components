@@ -4,20 +4,17 @@ export const FriendListItemStyle = styled.p`
   margin-left: 5px;
 `;
 
-export const FriendListItemChip = styled.span`
-  justify-content: start;
-  width: 15px;
-  height: 15px;
+export const Chip = styled.span`
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
   border-radius: ${p => p.theme.radii.round};
-  /* background-color: red; */
-  ${p => {
-    console.log(p.isOnline);
-  }}
+
   background-color: ${({ isOnline }) => {
     switch (isOnline) {
-      case 'true':
+      case true:
         return 'green';
-      case 'false':
+      case false:
         return 'red';
 
       default:

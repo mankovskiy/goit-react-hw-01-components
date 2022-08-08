@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types';
 import {
   FriendListItemStyle,
-  FriendListItemChip,
+  Chip,
 } from '../FriendListItem/FriendListItem.styled';
 
 export function FriendListItem({ avatar, name, isOnline }) {
   return (
     <>
-      <FriendListItemChip isOnline={isOnline}>{isOnline}</FriendListItemChip>
+      <Chip isOnline={isOnline}>{isOnline}</Chip>
       <img src={avatar} alt="User avatar" width="48" />
       <FriendListItemStyle>{name}</FriendListItemStyle>
     </>

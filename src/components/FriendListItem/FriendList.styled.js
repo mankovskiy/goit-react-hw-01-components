@@ -5,12 +5,10 @@ export const FriendListItemStyle = styled.li`
   border-radius: ${p => p.theme.radii.normal};
   box-shadow: 4px 9px 17px 5px rgba(0, 0, 0, 0.43);
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
-  padding: 5px 10px 5px 5px;
-  :not(:last-child) {
+  padding: 5px 10px 5px 10px;
+  &:not(:last-child) {
     margin-bottom: 10px;
   }
 `;
-
-export const FriendListStyle = styled.ul``;

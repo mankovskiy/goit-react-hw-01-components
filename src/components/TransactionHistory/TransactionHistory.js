@@ -1,25 +1,30 @@
-import { TableHead } from '../TransactionHistory/TransactionHistory.styled';
+import {
+  Table,
+  TableHead,
+  TableDescrString,
+  TableItem,
+} from '../TransactionHistory/TransactionHistory.styled';
 
 export function TransactionHistory({ items }) {
   return (
-    <table>
+    <Table>
       <thead>
-        <TableHead>
-          <th>Type</th>
-          <th>Amount</th>
-          <th>Currency</th>
-        </TableHead>
+        <tr>
+          <TableHead>Type</TableHead>
+          <TableHead>Amount</TableHead>
+          <TableHead>Currency</TableHead>
+        </tr>
       </thead>
 
       <tbody>
         {items.map(item => (
-          <tr key={item.id}>
-            <td>{item.type}</td>
-            <td>{item.amount}</td>
-            <td>{item.currency}</td>
-          </tr>
+          <TableDescrString key={item.id}>
+            <TableItem>{item.type}</TableItem>
+            <TableItem>{item.amount}</TableItem>
+            <TableItem>{item.currency}</TableItem>
+          </TableDescrString>
         ))}
       </tbody>
-    </table>
+    </Table>
   );
 }
